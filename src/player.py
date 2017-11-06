@@ -128,7 +128,9 @@ class Bean(pygame.sprite.Sprite):
         self.images.clear()
 
         self.images["R"] = main_image
+        self.images["R"] = pygame.transform.scale(main_image, (40, 40))
         self.images["L"] = pygame.transform.flip(main_image, True, False)
+        self.images["L"] = pygame.transform.scale(main_image, (40, 40))
         self.images["SR"] = pygame.transform.scale(main_image, (20, 20))
         self.images["SL"] = pygame.transform.flip(self.images["SR"], True, False)
 
